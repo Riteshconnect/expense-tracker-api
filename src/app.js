@@ -6,8 +6,9 @@ const expenseRoutes = require("./routes/expense.routes");
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: "https://your-netlify-url.netlify.app"
+}));app.use(express.json());
 
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/users", userRoutes);
