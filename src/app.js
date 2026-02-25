@@ -7,7 +7,7 @@ const expenseRoutes = require("./routes/expense.routes");
 const app = express();
 
 app.use(cors({
-  origin: "https://expense-tracker-fronte.netlify.app.netlify.app"
+  origin: "https://expense-tracker-fronte.netlify.app"
 }));app.use(express.json());
 
 app.use("/api/expenses", expenseRoutes);
